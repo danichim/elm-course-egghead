@@ -13,7 +13,10 @@ ask thing place =
         ++ place
         ++ "?"
 
+askPolitelyAboutFish: String -> String
+askPolitelyAboutFish = 
+    politely << (ask "fish")
+
 main =
     text 
-    <| politely
-    <| ask "fish" "sock"
+    <| askPolitelyAboutFish "hat"
