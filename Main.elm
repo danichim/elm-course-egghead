@@ -1,13 +1,10 @@
 module Main exposing(..)
 import Html exposing (text)
 
-ask : String -> String -> String
-ask thing place = 
-    "Is there a " 
-        ++ thing
-        ++ " in the "
-        ++ place
-        ++ "?"
+dog =
+    { name = "Spock"
+    , age = 3
+    }
 
 main =
-    text <| ask "fish" "sock"
+    text <| dog.name
