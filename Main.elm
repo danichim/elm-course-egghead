@@ -1,10 +1,19 @@
 module Main exposing(..)
 import Html exposing (text)
 
-dog =
+type alias Dog =
+    { name: String
+    , age: Int
+    }
+
+dogs =
     { name = "Spock"
     , age = 3
     }
 
+renderDog : Dog -> String
+renderDog dog =
+    dog.name ++ ", " ++ (String.fromInt dog.age)
+
 main =
-    text <| dog.name
+    text <| renderDog dogs
