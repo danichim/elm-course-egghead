@@ -1,13 +1,19 @@
 module Main exposing(..)
 import Html exposing (text)
 
+politely : String -> String
+politely phrase =
+    "Excuse me, " ++ phrase
+
 ask : String -> String -> String
 ask thing place = 
-    "Is there a " 
+    "is there a " 
         ++ thing
         ++ " in the "
         ++ place
         ++ "?"
 
 main =
-    text <| ask "fish" "sock"
+    text 
+    <| politely
+    <| ask "fish" "sock"
